@@ -31,7 +31,7 @@ function App() {
 
     e.preventDefault();
     if(state.search !== "") {
-      axios.get(`http://www.omdbapi.com/?apikey=${DB_KEY}&s=${state.search}`) 
+      axios.get(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=${DB_KEY}&s=${state.search}`) 
         .then(({data}) => {
           let results = data.Search;
           // console.log(results);
@@ -46,7 +46,7 @@ function App() {
 
 
   const openPopup = id => {
-    axios.get(`http://www.omdbapi.com/?apikey=${DB_KEY}&i=${id}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=${DB_KEY}&i=${id}`)
       .then(({data}) => {
         let result = data;
         console.log(data);
