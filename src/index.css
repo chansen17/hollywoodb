@@ -18,6 +18,16 @@ body {
   flex-direction: column;
 }
 
+.App main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.App section {
+  padding: 15px;
+}
+
 .searchbox-wrap .header h1,
 .searchbox-wrap .header p {
   color: gold;
@@ -29,16 +39,6 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2rem;
-}
-
-.App main {
-  max-width: 960px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.App section {
-  padding: 15px;
 }
 
 .searchbox-wrap .searchbox {
@@ -61,6 +61,26 @@ body {
 
 .searchbox-wrap .searchbox:focus {
   border-left: 5px inset gold;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-btn {
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background: gold;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 

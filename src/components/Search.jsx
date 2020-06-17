@@ -8,13 +8,15 @@ function Search({ handleInput, search }) {
                     <h1>HollywooDB</h1>
                     <p>Search for your favorite movies or television shows!</p>
                 </header>
-                <input 
-                type="text" 
-                placeholder="Search movie.." 
-                className="searchbox" 
-                onChange={handleInput}
-                onKeyPress={search}
-                />
+                    <form onSubmit={search}>
+                        <input 
+                        type="text" 
+                        placeholder="Search movie or TV show.." 
+                        className="searchbox" 
+                        onChange={handleInput}
+                        />
+                        <input className="search-btn" type="submit" value="Search" />
+                    </form>
             </section>
         </div>
     )

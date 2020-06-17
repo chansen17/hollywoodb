@@ -6,7 +6,7 @@ import Logo from "../hollywoodimg.png";
 function Navbar() {
     return (
         <ul className="navbar">
-            <li><NavLink to="/"><img className="logo" src={Logo}/></NavLink></li>
+            <li><NavLink to="/"><img className="logo" src={Logo} alt="hollywoodb" /></NavLink></li>
         </ul>
     )
 }

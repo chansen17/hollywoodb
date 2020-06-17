@@ -10,7 +10,7 @@ import axios from 'axios';
 function App() {
   // api key
   const DB_KEY = process.env.REACT_APP_DB_KEY;
-  const END_POINT = `http://www.omdbapi.com/?apikey=`
+  // const END_POINT = `http://www.omdbapi.com/?apikey=`
 
   const [state, setState] = useState({
     search: "",
@@ -29,7 +29,8 @@ function App() {
   
   const search = (e) => {
 
-    if(state.search !== "" && e.key === "Enter") {
+    e.preventDefault();
+    if(state.search !== "") {
       axios.get(`http://www.omdbapi.com/?apikey=${DB_KEY}&s=${state.search}`) 
         .then(({data}) => {
           let results = data.Search;
